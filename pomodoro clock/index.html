@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pomodoro Clock</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Pomodoro Clock</h1>
+
+    <div class="settings">
+        <div class="control">
+            <p>BREAK</p>
+            <button id="break-dec">-</button>
+            <span id="break-length">5</span>
+            <button id="break-inc">+</button>
+        </div>
+
+        <div class="control">
+            <p>WORK</p>
+            <button id="session-dec">-</button>
+            <span id="session-length">25</span>
+            <button id="session-inc">+</button>
+        </div>
+    </div>
+
+    <div class="timer">
+        <svg width="260" height="260">
+            <circle class="bg" cx="130" cy="130" r="115"></circle>
+            <circle class="progress" cx="130" cy="130" r="115"></circle>
+        </svg>
+
+        <div class="time-box">
+            <h2 id="timer-label">Work</h2>
+            <span id="time-left">25:00</span>
+        </div>
+    </div>
+
+    <div class="buttons">
+        <button id="start_stop">Start / Pause</button>
+        <button id="reset">Reset</button>
+    </div>
+
+</div>
+
+<audio id="beep">
+    <source src="https://actions.google.com/sounds/v1/alarms/alarm_clock.ogg" type="audio/ogg">
+</audio>
+
+<script src="script.js"></script>
+</body>
+</html>
